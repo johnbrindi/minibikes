@@ -1,0 +1,34 @@
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  content: [
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        ink:      '#1C1C1E',
+        slate:    '#2E2E33',
+        steel:    '#4A4A52',
+        mist:     '#F4F3EF',
+        linen:    '#FDFCF8',
+        copper: {
+          DEFAULT: '#B87333',
+          light:   '#D4924A',
+          dark:    '#8C5A26',
+        },
+        divider:  '#E4E2DC',
+        brand: {
+          red:    '#c0392b',
+        }
+      },
+      fontFamily: {
+        serif: ['var(--font-serif)', 'Cormorant Garamond', 'Georgia', 'serif'],
+        sans:  ['var(--font-sans)', 'DM Sans', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+}
+export default config
