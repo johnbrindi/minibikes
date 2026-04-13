@@ -1,6 +1,8 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { BIKES, REVIEWS } from '@/lib/data';
+import { getBikes } from '@/lib/api';
+import { Bike } from '@/lib/types';
 import { StarRating } from '@/components/StarRating';
 import { useCart } from '@/context/CartContext';
 import { useToast } from '@/context/ToastContext';
@@ -23,6 +25,16 @@ export default function Home() {
   const [reviewIdx, setReviewIdx] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const reviewTimer = useRef<NodeJS.Timeout | null>(null);
+  
+  const [bikes, setBikes] = useState<Bike[]>(BIKES);
+
+  useEffect(() => {
+    getBikes().then(fetched => {
+      if (fetched && fetched.length > 0) {
+        setBikes([...BIKES, ...fetched]);
+      }
+    });
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -152,7 +164,7 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {BIKES.map((bike) => (
+          {bikes.map((bike) => (
             <Link href={`/minibikes/${bike.id}`} key={bike.id} className="relative aspect-[16/9] w-full overflow-hidden group block">
               {bike.image && (
                 <img src={bike.image} alt={bike.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />

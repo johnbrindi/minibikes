@@ -1,12 +1,23 @@
 'use client';
 import { BIKES } from '@/lib/data';
+import { getBikes } from '@/lib/api';
+import { Bike } from '@/lib/types';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function MinibikesPage() {
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+  const [bikes, setBikes] = useState<Bike[]>(BIKES);
 
-  const sortedBikes = [...BIKES].sort((a, b) => {
+  useEffect(() => {
+    getBikes().then(fetched => {
+      if (fetched && fetched.length > 0) {
+        setBikes([...BIKES, ...fetched]);
+      }
+    });
+  }, []);
+
+  const sortedBikes = [...bikes].sort((a, b) => {
       if (sortOrder === 'asc') return a.price - b.price;
       return b.price - a.price;
   });

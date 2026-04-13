@@ -1,8 +1,10 @@
 'use client';
+import { getBikeById, getBikes } from '@/lib/api';
 import { BIKES } from '@/lib/data';
+import { Bike } from '@/lib/types';
 import { useCart } from '@/context/CartContext';
 import { useToast } from '@/context/ToastContext';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, ChevronUp, CheckCircle, AlertTriangle, Truck, MessageCircle, Send, ArrowRight } from 'lucide-react';
 
@@ -10,8 +12,11 @@ export default function MinibikeDetailPage({ params }: { params: { id: string } 
   const { addItem } = useCart();
   const { showToast } = useToast();
 
-  const bike = BIKES.find(b => b.id === params.id);
-  const [activeImage, setActiveImage] = useState(bike?.images?.[0] || bike?.image);
+  const staticBike = BIKES.find(b => b.id === params.id);
+  const [bike, setBike] = useState<Bike | null>(staticBike || null);
+  const [allBikes, setAllBikes] = useState<Bike[]>(BIKES);
+  const [loading, setLoading] = useState(!staticBike);
+  const [activeImage, setActiveImage] = useState<string | undefined>(staticBike?.images?.[0] || staticBike?.image);
   const [quantity, setQuantity] = useState(1);
   const [openAccordion, setOpenAccordion] = useState<string | null>(null);
   const [askName, setAskName] = useState('');
@@ -19,6 +24,28 @@ export default function MinibikeDetailPage({ params }: { params: { id: string } 
   const [askMessage, setAskMessage] = useState('');
   const [askSent, setAskSent] = useState(false);
   const [askLoading, setAskLoading] = useState(false);
+
+  useEffect(() => {
+    if (!staticBike) {
+      getBikeById(params.id).then(b => {
+        setBike(b);
+        if (b) setActiveImage(b.images?.[0] || b.image);
+        setLoading(false);
+      });
+    }
+    
+    getBikes().then(fetched => {
+      if (fetched && fetched.length > 0) {
+        setAllBikes([...BIKES, ...fetched]);
+      }
+    });
+  }, [params.id, staticBike]);
+
+  if (loading) return (
+    <div className="flex items-center justify-center min-h-screen font-montserrat text-xl text-gray-400">
+      Loading bike...
+    </div>
+  );
 
   if (!bike) return (
     <div className="flex items-center justify-center min-h-screen font-montserrat text-xl text-gray-400">
@@ -304,7 +331,7 @@ export default function MinibikeDetailPage({ params }: { params: { id: string } 
       <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-16 w-full border-t border-gray-200">
         <h2 className="font-playfair text-3xl font-bold mb-10 text-center">You may also like</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {BIKES.filter(b => b.id !== bike.id).map(b => (
+          {allBikes.filter(b => b.id !== bike.id).map(b => (
             <Link href={`/minibikes/${b.id}`} key={b.id} className="group flex flex-col">
               <div className="w-full aspect-[4/3] bg-gray-100 overflow-hidden mb-3 rounded-lg shadow-sm">
                 {b.image && (
