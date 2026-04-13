@@ -10,7 +10,7 @@ export function Footer() {
             <h3 className="font-playfair text-2xl font-bold mb-4">Custom built<br/>minibikes. USA</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               World&apos;s Finest Minibikes.<br/>
-              Handmade exclusively in New Zealand.<br/>
+              Handmade exclusively in USA.<br/>
               Built to last generations.
             </p>
           </div>
@@ -20,7 +20,6 @@ export function Footer() {
             <h4 className="font-semibold uppercase tracking-wide mb-4 text-brand-gold">Shop</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><Link href="/minibikes" className="hover:text-white transition-colors">Minibikes</Link></li>
-              <li><Link href="/parts-and-accessories" className="hover:text-white transition-colors">Parts & Accessories</Link></li>
               <li><Link href="/shipping" className="hover:text-white transition-colors">Shipping Info</Link></li>
             </ul>
           </div>
@@ -40,7 +39,16 @@ export function Footer() {
             <h4 className="font-semibold uppercase tracking-wide mb-4 text-brand-gold">Contact</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact Form</Link></li>
-              <li>Auckland, New Zealand</li>
+              <li>
+                <a href="https://wa.me/14424166435" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">
+                  WhatsApp: +1 (442) 416-6435
+                </a>
+              </li>
+              <li>
+                <a href="mailto:sheltiepawspromise787@gmail.com" className="hover:text-brand-gold transition-colors break-all">
+                  sheltiepawspromise787@gmail.com
+                </a>
+              </li>
             </ul>
           </div>
         </div>

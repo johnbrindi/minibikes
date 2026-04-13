@@ -172,7 +172,7 @@ function HeroSection({ setPage }) {
           textTransform: "uppercase",
           marginBottom: 32,
         }}>
-          Handmade Exclusively in New Zealand
+          Handmade Exclusively in USA
         </p>
 
         <div style={{
@@ -183,7 +183,7 @@ function HeroSection({ setPage }) {
           fontWeight: 900,
           marginBottom: 40,
         }}>
-          MINIBIKES.NZ
+          MINIBIKES
         </div>
 
         <div style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>

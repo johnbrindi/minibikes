@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: 'Custom built minibikes. USA',
-  description: 'World\'s Finest Minibikes. Handmade exclusively in New Zealand.',
+  description: 'World\'s Finest Minibikes. Handmade exclusively in USA.',
 };
 
 export default function RootLayout({
