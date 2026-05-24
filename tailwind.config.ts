@@ -23,12 +23,14 @@ const config: Config = {
           red: '#c0392b',
           black: '#111111',
           gold: '#c9a84c',
-          gray: '#f9fafb'
+          gray: '#f5f5f5',
         }
       },
       fontFamily: {
         serif: ['var(--font-serif)', 'Cormorant Garamond', 'Georgia', 'serif'],
         sans: ['var(--font-sans)', 'DM Sans', 'system-ui', 'sans-serif'],
+        playfair: ['var(--font-playfair)', 'serif'],
+        montserrat: ['var(--font-montserrat)', 'sans-serif'],
       },
     },
   },

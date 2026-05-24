@@ -3,63 +3,57 @@ import { Bike } from './types';
 
 // Fetch all bikes
 export async function getBikes(): Promise<Bike[]> {
-  try {
-    const res = await fetch('/api/bikes');
-    if (!res.ok) throw new Error('Failed to fetch bikes');
-    const data = await res.json();
-    return data as Bike[];
-  } catch (error) {
+  const { data, error } = await supabase
+    .from('minibikes')
+    .select('*')
+    .order('created_at', { ascending: false });
+
+  if (error) {
     console.error('Error fetching bikes:', error);
     return [];
   }
+  return data as Bike[];
 }
 
 // Fetch single bike
 export async function getBikeById(id: string): Promise<Bike | null> {
-  try {
-    const res = await fetch(`/api/bikes/${id}`);
-    if (!res.ok) throw new Error(`Failed to fetch bike ${id}`);
-    const data = await res.json();
-    return data as Bike;
-  } catch (error) {
+  const { data, error } = await supabase
+    .from('minibikes')
+    .select('*')
+    .eq('id', id)
+    .single();
+
+  if (error) {
     console.error(`Error fetching bike ${id}:`, error);
     return null;
   }
+  return data as Bike;
 }
 
 // Admin: Upsert Bike (Create / Update)
 export async function upsertBike(bike: Partial<Bike>) {
-  try {
-    // If the bike has an id and we are updating, we should theoretically use PUT /api/bikes/[id] 
-    // but the POST /api/bikes uses upsert so it handles both create and update.
-    const res = await fetch('/api/bikes', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(bike)
-    });
-    if (!res.ok) {
-      const err = await res.json();
-      throw new Error(err.error || 'Failed to check bike');
-    }
-    return await res.json();
-  } catch (error) {
-    console.error('Error upserting bike:', error);
-    throw error;
+  const response = await fetch('/api/bikes', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(bike),
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.error || 'Failed to save bike');
   }
+
+  return response.json();
 }
 
 // Admin: Delete Bike
 export async function deleteBike(id: string) {
-  try {
-    const res = await fetch(`/api/bikes/${id}`, {
-      method: 'DELETE'
-    });
-    if (!res.ok) {
-      const err = await res.json();
-      throw new Error(err.error || 'Failed to delete bike');
-    }
-  } catch (error) {
-    console.error('Error deleting bike:', error);
-    throw error;
+  const response = await fetch(`/api/bikes/${id}`, {
+    method: 'DELETE',
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.error || 'Failed to delete bike');
   }
 }
