@@ -29,7 +29,7 @@ export function Footer() {
             <h4 className="font-semibold uppercase tracking-wide mb-4 text-brand-gold">Info</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/scams" className="hover:text-brand-red transition-colors">Scam Warning</Link></li>
+              {/* <li><Link href="/scams" className="hover:text-brand-red transition-colors">Scam Warning</Link></li> */}
               <li><Link href="/terms" className="hover:text-white transition-colors">Terms / Policies</Link></li>
             </ul>
           </div>

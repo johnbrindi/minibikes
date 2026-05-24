@@ -12,7 +12,7 @@ export default function AdminDashboard() {
   const [bikes, setBikes] = useState<Bike[]>([]);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  
+
   // Form State
   const [isEditing, setIsEditing] = useState(false);
   const [formId, setFormId] = useState('');
@@ -21,7 +21,7 @@ export default function AdminDashboard() {
   const [color, setColor] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState<number | ''>('');
-  
+
   // File Upload State
   const [files, setFiles] = useState<File[]>([]);
   const [existingImages, setExistingImages] = useState<string[]>([]);
@@ -118,7 +118,7 @@ export default function AdminDashboard() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || price === '') return alert('Name and Price are required.');
-    
+
     setSaving(true);
     try {
       // 1. Upload new files if any
@@ -129,7 +129,7 @@ export default function AdminDashboard() {
 
       // 2. Combine existing and new images
       const finalImages = [...existingImages, ...newImageUrls];
-      
+
       // 3. Prepare Bike Object
       const bikeData: Partial<Bike> = {
         name,
@@ -150,7 +150,7 @@ export default function AdminDashboard() {
 
       // 4. Save to DB
       await upsertBike(bikeData);
-      
+
       // 5. Cleanup
       resetForm();
       await loadBikes();
@@ -173,21 +173,21 @@ export default function AdminDashboard() {
       </header>
 
       <main className="max-w-7xl mx-auto p-6 md:p-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
-        
+
         {/* Left Column: Form */}
-        <div className="lg:col-span-1 bg-white p-6 rounded-2xl shadow-sm border border-gray-200 self-start sticky top-28">
+        <div className="lg:col-span-1 bg-white p-6 rounded-2xl shadow-sm border border-gray-200 self-start lg:sticky top-28">
           <h2 className="font-playfair text-xl font-bold mb-6 flex items-center gap-2 text-[#111]">
             <Plus size={20} className="text-brand-gold" />
             {isEditing ? 'Edit Minibike' : 'Post New Minibike'}
           </h2>
-          
+
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <div className="flex flex-col gap-1">
               <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Full Name</label>
               <input required value={name} onChange={e => setName(e.target.value)} className="w-full border-2 border-gray-200 rounded-lg p-3 text-sm focus:border-brand-gold outline-none" placeholder="e.g. Built to order: Lil' Hustler" />
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Short Name</label>
                 <input value={shortName} onChange={e => setShortName(e.target.value)} className="w-full border-2 border-gray-200 rounded-lg p-3 text-sm focus:border-brand-gold outline-none" placeholder="Lil Hustler" />
@@ -206,7 +206,7 @@ export default function AdminDashboard() {
             {/* Images Uploader section */}
             <div className="flex flex-col gap-2 mt-2">
               <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Images (Max 5)</label>
-              
+
               <div className="flex flex-wrap gap-3 mb-2">
                 {/* Existing Images */}
                 {existingImages.map((src, idx) => (
@@ -226,12 +226,12 @@ export default function AdminDashboard() {
                     </button>
                   </div>
                 ))}
-                
+
                 {/* Add button */}
                 {existingImages.length + files.length < 5 && (
-                  <button 
-                    type="button" 
-                    onClick={() => fileInputRef.current?.click()} 
+                  <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
                     className="w-16 h-16 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 hover:text-brand-gold hover:border-brand-gold transition-colors"
                   >
                     <Plus size={20} />
@@ -258,7 +258,7 @@ export default function AdminDashboard() {
         {/* Right Column: Bikes List */}
         <div className="lg:col-span-2">
           <h2 className="font-playfair text-2xl font-bold mb-6 text-[#111]">Live Garage</h2>
-          
+
           {loading ? (
             <p className="text-gray-500 p-10 text-center bg-white rounded-2xl border border-gray-100">Loading bikes...</p>
           ) : bikes.length === 0 ? (

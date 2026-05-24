@@ -92,7 +92,7 @@ export function Navbar() {
 
         {/* Row 2 - Desktop secondary nav */}
         <div className="hidden lg:flex items-center justify-center gap-8 py-2 bg-gray-50 border-t border-gray-100 text-[10px] font-bold uppercase tracking-widest">
-          <Link
+          {/* <Link
             href="/scams"
             className={clsx(
               "transition-colors duration-200 hover:text-red-600",
@@ -100,8 +100,8 @@ export function Navbar() {
             )}
           >
             Scam Warning
-          </Link>
-          <span className="text-gray-300">|</span>
+          </Link> */}
+          <span className="text-gray-300"></span>
           <Link
             href="/terms"
             className={clsx(
