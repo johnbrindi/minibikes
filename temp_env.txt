@@ -1,0 +1,22 @@
+# Gmail SMTP credentials for contact form
+# Use a Gmail App Password (NOT your regular Gmail password)
+# To create an App Password:
+#   1. Go to myaccount.google.com/security
+#   2. Enable 2-Step Verification if not already enabled
+#   3. Search for "App passwords", create one labeled "Minibike Site"
+#   4. Copy the 16-character password and paste it below
+
+SMTP_USER=sheltiepawspromise787@gmail.com
+SMTP_PASS=your_gmail_app_password_here
+
+# Password backup
+# 65014John_@1
+# Supabase Credentials for Database and Storage
+NEXT_PUBLIC_SUPABASE_URL=https://pjebtnrmsfkzfmzbpkgu.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBqZWJ0bnJtc2ZremZtemJwa2d1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYwMjQxMjksImV4cCI6MjA5MTYwMDEyOX0.uzS9UN0IQyaYPnleTEbE47moWSt4kLdzuuM7TRoPeRY
+# NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBqZWJ0bnJtc2ZremZtemJwa2d1Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NjAyNDEyOSwiZXhwIjoyMDkxNjAwMTI5fQ.GIlB-PbYNdhfS7lmGR_ZBPc3UXSCNDlmC7xWs6BAGc8
+# Admin Dashboard Password (change this to something secure)
+ADMIN_PASSWORD=admin123
+
+# Direct PostgreSQL connection string
+DATABASE_URL="postgresql://postgres:65014John_@1@db.pjebtnrmsfkzfmzbpkgu.supabase.co:5432/postgres"

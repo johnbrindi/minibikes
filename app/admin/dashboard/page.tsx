@@ -175,7 +175,7 @@ export default function AdminDashboard() {
       <main className="max-w-7xl mx-auto p-6 md:p-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
 
         {/* Left Column: Form */}
-        <div className="lg:col-span-1 bg-white p-6 rounded-2xl shadow-sm border border-gray-200 self-start lg:sticky top-28">
+        <div className="lg:col-span-1 bg-white p-6 rounded-2xl shadow-sm border border-gray-200 self-start sticky top-28">
           <h2 className="font-playfair text-xl font-bold mb-6 flex items-center gap-2 text-[#111]">
             <Plus size={20} className="text-brand-gold" />
             {isEditing ? 'Edit Minibike' : 'Post New Minibike'}
@@ -187,7 +187,7 @@ export default function AdminDashboard() {
               <input required value={name} onChange={e => setName(e.target.value)} className="w-full border-2 border-gray-200 rounded-lg p-3 text-sm focus:border-brand-gold outline-none" placeholder="e.g. Built to order: Lil' Hustler" />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col gap-1">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500">Short Name</label>
                 <input value={shortName} onChange={e => setShortName(e.target.value)} className="w-full border-2 border-gray-200 rounded-lg p-3 text-sm focus:border-brand-gold outline-none" placeholder="Lil Hustler" />
