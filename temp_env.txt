@@ -6,7 +6,7 @@
 #   3. Search for "App passwords", create one labeled "Minibike Site"
 #   4. Copy the 16-character password and paste it below
 
-SMTP_USER=sheltiepawspromise787@gmail.com
+SMTP_USER=Glexhollsnd@gmail.com
 SMTP_PASS=your_gmail_app_password_here
 
 # Password backup

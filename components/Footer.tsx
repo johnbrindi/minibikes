@@ -7,10 +7,10 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="font-playfair text-2xl font-bold mb-4">Custom built<br/>minibikes. USA</h3>
+            <h3 className="font-playfair text-2xl font-bold mb-4">Custom built<br />minibikes. USA</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              World&apos;s Finest Minibikes.<br/>
-              Handmade exclusively in USA.<br/>
+              World&apos;s Finest Minibikes.<br />
+              Handmade exclusively in USA.<br />
               Built to last generations.
             </p>
           </div>
@@ -40,13 +40,13 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact Form</Link></li>
               <li>
-                <a href="https://wa.me/14424166435" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">
-                  WhatsApp: +1 (442) 416-6435
+                <a href="https://wa.me/14247035460" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors">
+                  WhatsApp: +1 (424) 703-5460
                 </a>
               </li>
               <li>
-                <a href="mailto:sheltiepawspromise787@gmail.com" className="hover:text-brand-gold transition-colors break-all">
-                  sheltiepawspromise787@gmail.com
+                <a href="mailto:Glexhollsnd@gmail.com" className="hover:text-brand-gold transition-colors break-all">
+                  Glexhollsnd@gmail.com
                 </a>
               </li>
             </ul>

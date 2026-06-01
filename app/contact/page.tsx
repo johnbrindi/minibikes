@@ -60,7 +60,7 @@ export default function ContactPage() {
 
             {/* Email */}
             <a
-              href="mailto:sheltiepawspromise787@gmail.com"
+              href="mailto:Glexhollsnd@gmail.com"
               className="flex items-start gap-4 bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md hover:border-[#c9a84c]/40 transition-all duration-200 group"
             >
               <div className="bg-[#c9a84c]/10 rounded-xl p-3 group-hover:bg-[#c9a84c]/20 transition-colors flex-shrink-0">
@@ -68,13 +68,13 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-bold text-xs text-gray-700 mb-1 uppercase tracking-widest">Email</p>
-                <p className="text-sm text-gray-500 break-all">sheltiepawspromise787@gmail.com</p>
+                <p className="text-sm text-gray-500 break-all">Glexhollsnd@gmail.com</p>
               </div>
             </a>
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/14424166435"
+              href="https://wa.me/14247035460"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-start gap-4 bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md hover:border-green-300 transition-all duration-200 group"
@@ -84,7 +84,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-bold text-xs text-gray-700 mb-1 uppercase tracking-widest">WhatsApp</p>
-                <p className="text-sm text-gray-500">+1 (442) 416-6435</p>
+                <p className="text-sm text-gray-500">+1 (424) 703-5460</p>
                 <p className="text-[11px] text-green-600 font-bold mt-1 uppercase tracking-wide flex items-center gap-1">
                   Tap to chat <ArrowRight size={11} />
                 </p>
@@ -203,7 +203,7 @@ export default function ContactPage() {
                     </button>
 
                     <a
-                      href="https://wa.me/14424166435"
+                      href="https://wa.me/14247035460"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-whatsapp py-4 px-8"
