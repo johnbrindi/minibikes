@@ -25,7 +25,7 @@ export default function Home() {
   const [reviewIdx, setReviewIdx] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const reviewTimer = useRef<NodeJS.Timeout | null>(null);
-  
+
   const [bikes, setBikes] = useState<Bike[]>(BIKES);
 
   useEffect(() => {
@@ -117,9 +117,8 @@ export default function Home() {
             <button
               key={idx}
               onClick={() => setCurrentIdx(idx)}
-              className={`rounded-full transition-all duration-400 ${
-                currentIdx === idx ? 'w-6 h-2 bg-[#c9a84c]' : 'w-2 h-2 bg-white/40 hover:bg-white/70'
-              }`}
+              className={`rounded-full transition-all duration-400 ${currentIdx === idx ? 'w-6 h-2 bg-[#c9a84c]' : 'w-2 h-2 bg-white/40 hover:bg-white/70'
+                }`}
               aria-label={`Slide ${idx + 1}`}
             />
           ))}
@@ -137,7 +136,7 @@ export default function Home() {
           </h1>
 
           <p className="text-white/60 text-base md:text-lg max-w-md mb-14 leading-relaxed">
-            Hand-built to order in New Zealand. Free shipping to USA &amp; Australia.
+            Hand-built to order. National and international shipping available.
           </p>
 
           {/* ── CTA Buttons — highly visible ── */}
@@ -194,9 +193,9 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center lg:text-left">
             {[
               { Icon: Hammer, title: 'Handcrafted in NZ', desc: 'Every frame is welded and assembled by hand in our Auckland workshop.' },
-              { Icon: Zap,    title: 'Reliable Engines',  desc: 'Powered by durable 4-stroke engines built to run hard all weekend.' },
-              { Icon: Palette,title: 'Custom Colours',    desc: 'Choose your paint to match your personality or your business.' },
-              { Icon: Truck,  title: 'Free Shipping',     desc: 'Worldwide shipping included in the list price. No hidden fees at checkout.' },
+              { Icon: Zap, title: 'Reliable Engines', desc: 'Powered by durable 4-stroke engines built to run hard all weekend.' },
+              { Icon: Palette, title: 'Custom Colours', desc: 'Choose your paint to match your personality or your business.' },
+              { Icon: Truck, title: 'Global Shipping', desc: 'National and international shipping available. Shipping cost calculated at checkout.' },
             ].map(({ Icon, title, desc }) => (
               <div key={title} className="flex flex-col items-center lg:items-start gap-4">
                 <div className="w-12 h-12 rounded-xl bg-[#c9a84c]/10 flex items-center justify-center flex-shrink-0">

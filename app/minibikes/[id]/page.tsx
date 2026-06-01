@@ -33,7 +33,7 @@ export default function MinibikeDetailPage({ params }: { params: { id: string } 
         setLoading(false);
       });
     }
-    
+
     getBikes().then(fetched => {
       if (fetched && fetched.length > 0) {
         setAllBikes([...BIKES, ...fetched]);
@@ -109,11 +109,10 @@ export default function MinibikeDetailPage({ params }: { params: { id: string } 
                   <button
                     key={idx}
                     onClick={() => setActiveImage(img)}
-                    className={`w-16 h-16 md:w-20 md:h-20 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
-                      activeImage === img
+                    className={`w-16 h-16 md:w-20 md:h-20 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all duration-200 ${activeImage === img
                         ? 'border-[#c9a84c] shadow-md scale-105'
                         : 'border-transparent hover:border-gray-300'
-                    }`}
+                      }`}
                     aria-label={`View image ${idx + 1}`}
                   >
                     <img src={img} alt={`View ${idx + 1}`} className="w-full h-full object-cover" />
@@ -134,14 +133,14 @@ export default function MinibikeDetailPage({ params }: { params: { id: string } 
               ${bike.price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </p>
             <p className="text-[10px] text-gray-400 mb-7 uppercase tracking-widest font-bold">
-              Includes shipping to USA &amp; Australia
+              National and international shipping available
             </p>
 
             {/* Info Badges */}
             <div className="flex flex-col gap-3 mb-8 p-5 bg-white rounded-xl border border-gray-100 shadow-sm">
               <div className="flex items-center gap-3 text-sm">
                 <CheckCircle className="text-green-500 w-5 h-5 flex-shrink-0" />
-                <span className="text-gray-700 font-medium">Free worldwide shipping included</span>
+                <span className="text-gray-700 font-medium">National and international shipping available</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <AlertTriangle className="text-amber-500 w-5 h-5 flex-shrink-0" />
@@ -149,7 +148,7 @@ export default function MinibikeDetailPage({ params }: { params: { id: string } 
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Truck className="text-[#c9a84c] w-5 h-5 flex-shrink-0" />
-                <span className="text-gray-700 font-medium">Ships to USA or Australia</span>
+                <span className="text-gray-700 font-medium">Ships nationally and internationally</span>
               </div>
             </div>
 
@@ -185,7 +184,7 @@ export default function MinibikeDetailPage({ params }: { params: { id: string } 
             <div className="space-y-3 text-gray-600 text-sm leading-relaxed mb-8">
               <p>
                 Built to order in your choice of colour. 6 week approximate lead time on manufacture.
-                Shipping to USA or Australia is included in the purchase price for 1 bike.
+                National and international shipping available.
               </p>
               {bike.description && <p>{bike.description}</p>}
               <p>
@@ -231,7 +230,7 @@ export default function MinibikeDetailPage({ params }: { params: { id: string } 
                 </button>
                 {openAccordion === 'shipping' && (
                   <p className="pb-5 text-sm text-gray-500 leading-relaxed">
-                    Free shipping to USA and Australia is included. Estimated delivery after build is
+                    National and international shipping available. Estimated delivery after build is
                     2–3 weeks via express freight. Contact us for combined shipping rates on multiple bikes.
                   </p>
                 )}

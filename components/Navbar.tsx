@@ -34,7 +34,7 @@ export function Navbar() {
         <div className="animate-marquee flex items-center gap-3 text-xs font-semibold tracking-widest uppercase">
           <Truck size={14} className="flex-shrink-0 text-[#c9a84c]" />
           <span>
-            Free Shipping on everything! The price listed includes shipping to USA  — select currency from drop down menu
+            National and international shipping available — select currency from drop down menu
           </span>
         </div>
       </div>

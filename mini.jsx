@@ -77,7 +77,7 @@ function Navbar({ page, setPage, cartCount }) {
     }}>
       {/* Announcement bar */}
       <div style={{ background: "#1a1a1a", color: "#fff", textAlign: "center", padding: "10px 16px", fontSize: 13, letterSpacing: "0.02em" }}>
-        Free Shipping on everything! The price listed includes shipping to USA or Australia — select currency from drop down menu
+        National and international shipping available — select currency from drop down menu
       </div>
 
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>

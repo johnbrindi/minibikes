@@ -18,12 +18,12 @@ export default function MinibikesPage() {
   }, []);
 
   const sortedBikes = [...bikes].sort((a, b) => {
-      if (sortOrder === 'asc') return a.price - b.price;
-      return b.price - a.price;
+    if (sortOrder === 'asc') return a.price - b.price;
+    return b.price - a.price;
   });
 
   const toggleSort = () => {
-      setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc');
+    setSortOrder(prev => prev === 'asc' ? 'desc' : 'asc');
   };
 
   return (
@@ -59,7 +59,7 @@ export default function MinibikesPage() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-xl text-brand-black leading-relaxed">
             Our current range of Minibikes are all made to order in your choice of colour.<br />
-            Shipping is included to USA or Australia in the listed price.
+            National and international shipping available.
           </p>
         </div>
 

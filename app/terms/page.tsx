@@ -28,7 +28,7 @@ export default function TermsPage() {
         <div className="pb-12 border-b border-gray-200">
           <h2 className="font-playfair text-3xl font-bold mb-6 text-brand-black">Payment Terms</h2>
           <div className="space-y-4 text-gray-600 leading-relaxed">
-            <p>We require a 100% upfront payment to begin your custom build. Due to international shipping constraints, the price listed at checkout is final and inclusive of shipping to our specified regions.</p>
+            <p>We require a 100% upfront payment to begin your custom build. National and international shipping available, shipping cost calculated at checkout.</p>
             <p>Import duties, local taxes, or customs clearance fees imposed by the destination country are the sole responsibility of the buyer and are not included in our pricing.</p>
           </div>
         </div>
