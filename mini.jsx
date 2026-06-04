@@ -701,19 +701,13 @@ function ScamsPage() {
       <div style={{ maxWidth: 800, margin: "0 auto", padding: "60px 24px" }}>
         <div style={{ background: "#fff8f6", border: "2px solid #c0392b", padding: 32, marginBottom: 40 }}>
           <h2 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 24, fontWeight: 700, color: "#c0392b", margin: "0 0 16px" }}>
-            Our ONLY official website is minibikes.nz
+            Our ONLY official website is custombuiltminibikesusa.online
           </h2>
           <p style={{ fontSize: 15, color: "#444", lineHeight: 1.8, margin: 0 }}>
             We only sell through this website. If you have found a listing on Facebook Marketplace, Trade Me, or any other platform at a significantly lower price, it is likely a scam. We do not authorise any resellers or third-party sellers.
           </p>
         </div>
 
-        {["We never sell bikes on Facebook Marketplace.", "We never ask for bank transfers to unknown accounts.", "We never offer prices significantly below our website pricing.", "All legitimate orders are processed through our official website."].map((tip, i) => (
-          <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 16, padding: "16px 0", borderBottom: "1px solid #f0f0f0" }}>
-            <span style={{ color: "#c0392b", fontSize: 20, flexShrink: 0 }}>✕</span>
-            <p style={{ fontSize: 15, color: "#444", margin: 0, lineHeight: 1.7 }}>{tip}</p>
-          </div>
-        ))}
 
         <div style={{ background: "#f8f8f6", padding: 32, marginTop: 40 }}>
           <h3 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>Think you've been scammed?</h3>
@@ -777,7 +771,7 @@ function Footer({ setPage }) {
             <h4 style={{ color: "#fff", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", margin: "0 0 16px" }}>Contact</h4>
             <p style={{ fontSize: 13, lineHeight: 2, margin: 0 }}>
               New Zealand<br />
-              minibikes.nz<br />
+              custombuiltminibikesusa.online<br />
               <button onClick={() => setPage("contact-form")} style={{ background: "none", border: "none", color: "#e8b800", cursor: "pointer", padding: 0, fontSize: 13, fontFamily: "inherit" }}>Contact Form →</button>
             </p>
           </div>
