@@ -203,13 +203,13 @@ export default function MinibikeDetailPage({ params }: { params: { id: string } 
               </p>
               <p>
                 Available in a range of colours with colour-coded seat stitching. Follow{' '}
-                <span className="font-semibold text-[#111]">@hustler_minibikes_nz</span> on Instagram
+                <span className="font-semibold text-[#111]">https://www.custombuiltminibikesusa.online/</span> on Instagram
                 to see all the exciting colour options and customer builds in real time.
               </p>
               <div className="p-4 bg-amber-50 border-l-4 border-[#c9a84c] rounded-r-lg text-gray-700 font-medium text-[13px]">
                 Duty charges and local taxes are payable by the purchaser upon customs clearance in
                 their country or state. Please contact us for a quote on a cheaper rate for multiple
-                bikes. New Zealand delivery is an additional cost.
+                bikes.
               </div>
               <p className="italic text-gray-400 text-xs">
                 By purchasing this minibike you acknowledge it is built to order and you accept our Terms of Service.
