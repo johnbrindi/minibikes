@@ -307,7 +307,7 @@ export default function MinibikeDetailPage({ params }: { params: { id: string } 
                             {askLoading ? 'Sending...' : 'Send Message'}
                           </button>
                           <a
-                            href="https://wa.me/14424166435"
+                            href="https://wa.me/14247035460"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-whatsapp py-3 px-5"

@@ -8,7 +8,7 @@ export const BIKES: Bike[] = [
 ];
 
 export const REVIEWS: Review[] = [
-  { text: 'Met Tim at Kumeu Hotrod Show, bought Lil Hustler for grandson but enjoys it himself', author: 'Jack P.', location: 'Auckland, NZ', stars: 5 },
+  { text: 'Met Tim at Kumeu Hotrod Show, bought Lil Hustler for grandson but enjoys it himself', author: 'Jack P.', location: 'Auckland', stars: 5 },
   { text: 'Bought three bikes, used as corporate gift. Amazing build quality and attention to detail.', author: 'Sarah W.', location: 'Sydney, AU', stars: 5 },
   { text: 'Fatboy arrived well packaged, ready to ride in minutes. Best weekend toy ever.', author: 'Mike T.', location: 'Los Angeles, USA', stars: 5 },
 ];

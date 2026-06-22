@@ -192,7 +192,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center lg:text-left">
             {[
-              { Icon: Hammer, title: 'Handcrafted in NZ', desc: 'Every frame is welded and assembled by hand in our Auckland workshop.' },
+              { Icon: Hammer, title: 'Handcrafted', desc: 'Every frame is welded and assembled by hand in our workshop.' },
               { Icon: Zap, title: 'Reliable Engines', desc: 'Powered by durable 4-stroke engines built to run hard all weekend.' },
               { Icon: Palette, title: 'Custom Colours', desc: 'Choose your paint to match your personality or your business.' },
               { Icon: Truck, title: 'Global Shipping', desc: 'National and international shipping available. Shipping cost calculated at checkout.' },

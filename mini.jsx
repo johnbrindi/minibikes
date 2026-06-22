@@ -4,10 +4,10 @@ const NAV_LINKS = ["Home", "Minibikes", "Parts and Accessories", "Shipping", "Co
 const NAV_LINKS2 = ["Scams", "Terms / Policies"];
 
 const BIKES = [
-  { name: "Lil Hustler", color: "#e8b800", desc: "The perfect entry-level minibike. Lightweight, reliable, and loads of fun for all ages.", price: "From $1,895 NZD", img: "🏍️" },
-  { name: "Hustler Fatboy", color: "#8B2FC9", desc: "Big tyres, big attitude. The Fatboy delivers serious style and performance in a compact package.", price: "From $2,295 NZD", img: "🏍️" },
-  { name: "Hustler Classic", color: "#c0392b", desc: "Timeless design meets modern engineering. The Classic is a head-turner at every show.", price: "From $2,095 NZD", img: "🏍️" },
-  { name: "Hustler Chopper", color: "#2c7a4b", desc: "Long and low, the Chopper brings that iconic bobber look to the minibike world.", price: "From $2,495 NZD", img: "🏍️" },
+  { name: "Lil Hustler", color: "#e8b800", desc: "The perfect entry-level minibike. Lightweight, reliable, and loads of fun for all ages.", price: "From $1,895", img: "🏍️" },
+  { name: "Hustler Fatboy", color: "#8B2FC9", desc: "Big tyres, big attitude. The Fatboy delivers serious style and performance in a compact package.", price: "From $2,295", img: "🏍️" },
+  { name: "Hustler Classic", color: "#c0392b", desc: "Timeless design meets modern engineering. The Classic is a head-turner at every show.", price: "From $2,095", img: "🏍️" },
+  { name: "Hustler Chopper", color: "#2c7a4b", desc: "Long and low, the Chopper brings that iconic bobber look to the minibike world.", price: "From $2,495", img: "🏍️" },
 ];
 
 const REVIEWS = [
@@ -41,8 +41,8 @@ const PARTS = [
 ];
 
 const FAQS = [
-  { q: "Where are Hustler Minibikes made?", a: "Every Hustler Minibike is handmade exclusively in New Zealand. We take pride in our local craftsmanship and quality control." },
-  { q: "What markets do you ship to?", a: "We ship to USA, Australia, and New Zealand. Free shipping is included in the listed price." },
+  { q: "Where are Hustler Minibikes made?", a: "Every Hustler Minibike is handmade with pride and quality craftsmanship." },
+  { q: "What markets do you ship to?", a: "We ship to USA and Australia. Free shipping is included in the listed price." },
   { q: "What engine do the bikes use?", a: "Our bikes use high-quality 4-stroke Honda-style engines ranging from 50cc to 196cc depending on the model." },
   { q: "Can adults ride Hustler Minibikes?", a: "Absolutely! Our bikes are designed to be enjoyed by all ages. The Fatboy and Classic models comfortably support adult riders." },
 ];
@@ -333,10 +333,10 @@ function HomePage({ setPage, addToCart }) {
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 40 }}>
             {[
-              { icon: "🔨", title: "Handcrafted in NZ", desc: "Every bike is built by hand in New Zealand with obsessive attention to quality." },
+              { icon: "🔨", title: "Handcrafted", desc: "Every bike is built by hand with obsessive attention to quality." },
               { icon: "⚙️", title: "Reliable Engines", desc: "We use proven, reliable 4-stroke engines that start first kick every time." },
               { icon: "🎨", title: "Custom Colours", desc: "Choose your frame colour at order. We'll build it exactly how you want it." },
-              { icon: "🚚", title: "Free Shipping", desc: "Free shipping to USA, Australia, and New Zealand. Fully insured in transit." },
+              { icon: "🚚", title: "Free Shipping", desc: "Free shipping to USA and Australia. Fully insured in transit." },
             ].map(f => (
               <div key={f.title} style={{ padding: "8px 16px" }}>
                 <div style={{ fontSize: 40, marginBottom: 16 }}>{f.icon}</div>
@@ -400,12 +400,7 @@ function MinibikesPage({ setPage, addToCart }) {
           Our Minibike Range
         </h1>
         <p style={{ fontSize: 16, color: "#aaa", maxWidth: 560, margin: "0 auto" }}>
-          Every Hustler Minibike is handcrafted to order in New Zealand. Choose your model, pick your colour, and we'll build it for you.
-        </p>
-      </div>
-
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 24px" }}>
-        {BIKES.map((bike, i) => (
+            Every Hustler Minibike is handcrafted to order. Choose your model, pick your colour, and we'll build it for you.
           <div key={bike.name} style={{
             display: "grid",
             gridTemplateColumns: i % 2 === 0 ? "1fr 1fr" : "1fr 1fr",
@@ -532,8 +527,7 @@ function ShippingPage() {
       </div>
       <div style={{ maxWidth: 800, margin: "0 auto", padding: "60px 24px" }}>
         {[
-          { region: "🇳🇿 New Zealand", time: "1–5 Business Days", price: "Included in price", notes: "Courier delivery direct to your door. Rural addresses may take slightly longer." },
-          { region: "🇦🇺 Australia", time: "7–14 Business Days", price: "Included in price", notes: "Ships via sea freight. All bikes are crated and fully insured during transit." },
+          { region: "🇺 Australia", time: "7–14 Business Days", price: "Included in price", notes: "Ships via sea freight. All bikes are crated and fully insured during transit." },
           { region: "🇺🇸 United States", time: "14–21 Business Days", price: "Included in price", notes: "Ships via sea freight. Customs duties and import taxes are the buyer's responsibility." },
         ].map(s => (
           <div key={s.region} style={{ borderBottom: "1px solid #e8e8e8", padding: "36px 0" }}>
@@ -661,7 +655,7 @@ function AboutPage() {
               Hustler Minibikes was founded by Tim, a lifelong motorcycle enthusiast with a passion for old-school American minibikes and hot rod culture. After years of restoring vintage bikes, Tim decided to build his own — the result was the Hustler range.
             </p>
             <p style={{ fontSize: 15, color: "#555", lineHeight: 1.9 }}>
-              Every bike is handbuilt in our New Zealand workshop, using quality components and finishing touches that you simply won't find anywhere else at this price point.
+              Every bike is handbuilt in our workshop, using quality components and finishing touches that you simply won't find anywhere else at this price point.
             </p>
           </div>
           <div style={{ background: "#f0f0ec", height: 360, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 80 }}>
@@ -677,7 +671,7 @@ function AboutPage() {
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
-          {[["100%", "New Zealand Made"], ["4–6 wks", "Lead Time"], ["3 Markets", "USA · AUS · NZ"]].map(([val, label]) => (
+          {[['100%', 'Handmade'], ['4–6 wks', 'Lead Time'], ['3 Markets', 'USA · AUS']].map(([val, label]) => (
             <div key={label} style={{ textAlign: "center", padding: 24, border: "1px solid #e8e8e8" }}>
               <p style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 36, fontWeight: 700, margin: "0 0 8px", color: "#1a1a1a" }}>{val}</p>
               <p style={{ fontSize: 13, color: "#888", textTransform: "uppercase", letterSpacing: "0.1em", margin: 0 }}>{label}</p>
@@ -751,7 +745,7 @@ function Footer({ setPage }) {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 40, marginBottom: 48 }}>
           <div>
             <div style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 22, fontWeight: 700, color: "#fff", marginBottom: 12 }}>Hustler Minibikes</div>
-            <p style={{ fontSize: 13, lineHeight: 1.8, margin: 0 }}>World's finest minibikes.<br />Handmade in New Zealand.</p>
+            <p style={{ fontSize: 13, lineHeight: 1.8, margin: 0 }}>World's finest minibikes.<br />Handmade with care.</p>
           </div>
           <div>
             <h4 style={{ color: "#fff", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", margin: "0 0 16px" }}>Shop</h4>
@@ -770,7 +764,7 @@ function Footer({ setPage }) {
           <div>
             <h4 style={{ color: "#fff", fontSize: 13, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", margin: "0 0 16px" }}>Contact</h4>
             <p style={{ fontSize: 13, lineHeight: 2, margin: 0 }}>
-              New Zealand<br />
+              USA<br />
               custombuiltminibikesusa.online<br />
               <button onClick={() => setPage("contact-form")} style={{ background: "none", border: "none", color: "#e8b800", cursor: "pointer", padding: 0, fontSize: 13, fontFamily: "inherit" }}>Contact Form →</button>
             </p>
@@ -778,9 +772,9 @@ function Footer({ setPage }) {
         </div>
 
         <div style={{ borderTop: "1px solid #333", paddingTop: 24, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
-          <p style={{ fontSize: 12, margin: 0 }}>© {new Date().getFullYear()} Hustler Minibikes NZ. All rights reserved.</p>
+          <p style={{ fontSize: 12, margin: 0 }}>© {new Date().getFullYear()} Hustler Minibikes. All rights reserved.</p>
           <div style={{ display: "flex", gap: 16 }}>
-            <span style={{ fontSize: 12 }}>🇳🇿 Made in New Zealand</span>
+            <span style={{ fontSize: 12 }}>Made with pride.</span>
           </div>
         </div>
       </div>
