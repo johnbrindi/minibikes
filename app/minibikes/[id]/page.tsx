@@ -203,7 +203,7 @@ export default function MinibikeDetailPage({ params }: { params: { id: string } 
               </p>
               <p>
                 Available in a range of colours with colour-coded seat stitching. Follow{' '}
-                <span className="font-semibold text-[#111]">https://www.custombuiltminibikesusa.online/</span> on Instagram
+                <span className="font-semibold text-[#111]">@custom_built_minibikes_usa</span> on Instagram
                 to see all the exciting colour options and customer builds in real time.
               </p>
               <div className="p-4 bg-amber-50 border-l-4 border-[#c9a84c] rounded-r-lg text-gray-700 font-medium text-[13px]">
