@@ -11,6 +11,9 @@ export const REVIEWS: Review[] = [
   { text: 'Met Tim at Kumeu Hotrod Show, bought Lil Hustler for grandson but enjoys it himself', author: 'Jack P.', location: 'Auckland', stars: 5 },
   { text: 'Bought three bikes, used as corporate gift. Amazing build quality and attention to detail.', author: 'Sarah W.', location: 'Sydney, AU', stars: 5 },
   { text: 'Fatboy arrived well packaged, ready to ride in minutes. Best weekend toy ever.', author: 'Mike T.', location: 'Los Angeles, USA', stars: 5 },
+  { text: 'Absolutely love my new Hustler Customs bike! The color is stunning and it rides incredibly smooth.', author: 'Emma R.', location: 'Miami, FL', stars: 5 },
+  { text: 'Great customer service and fast shipping. The bike was exactly as described.', author: 'David L.', location: 'Houston, TX', stars: 5 },
+  { text: 'Purchased the Badboy Chopper and it exceeded all expectations. The vintage look is awesome.', author: 'Chris M.', location: 'Chicago, IL', stars: 5 },
 ];
 
 export const PARTS: Part[] = [
