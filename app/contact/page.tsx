@@ -60,7 +60,7 @@ export default function ContactPage() {
 
             {/* Email */}
             <a
-              href="mailto:Glexhollsnd@gmail.com"
+              href="mailto:glexholland@gmail.com"
               className="flex items-start gap-4 bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-md hover:border-[#c9a84c]/40 transition-all duration-200 group"
             >
               <div className="bg-[#c9a84c]/10 rounded-xl p-3 group-hover:bg-[#c9a84c]/20 transition-colors flex-shrink-0">
@@ -68,7 +68,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-bold text-xs text-gray-700 mb-1 uppercase tracking-widest">Email</p>
-                <p className="text-sm text-gray-500 break-all">Glexhollsnd@gmail.com</p>
+                <p className="text-sm text-gray-500 break-all">glexholland@gmail.com</p>
               </div>
             </a>
 

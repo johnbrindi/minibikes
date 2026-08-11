@@ -45,8 +45,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:Glexhollsnd@gmail.com" className="hover:text-brand-gold transition-colors break-all">
-                  Glexhollsnd@gmail.com
+                <a href="mailto:glexholland@gmail.com" className="hover:text-brand-gold transition-colors break-all">
+                  glexholland@gmail.com
                 </a>
               </li>
             </ul>
